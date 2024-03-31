@@ -1,10 +1,10 @@
 <template>
-  <Disclosure as="nav" class="bg-white">
+  <Disclosure as="nav" class="flex items-center">
     <div class="mx-auto">
-      <div class="relative flex items-center justify-between">
-        <div class="flex flex-1 items-stretch justify-start">
-          <DesktopNavbar :navigation="navigation" class="hidden md:block"/>
-          <div class="flex items-center sm:hidden pt-4 justify-between w-screen px-5">
+      <div class="relative flex items-center">
+        <div class="flex flex-1 items-stretch justify-between lg:-mt-12">
+          <DesktopNavbar :navigation="navigation" :contactInformation="contactInformation.attributes" class="hidden md:block"/>
+          <div class="flex items-center md:hidden pt-4 justify-between w-screen px-5 -mt-14 md:mt-0">
             <Logo class="h-10"/>
             <Bars3Icon @click="open = true" class="block h-6 w-6" aria-hidden="true" />
           </div>
@@ -14,7 +14,7 @@
     <MobileNavbar :navigation="navigation" :open="open" @close="open = false" @click="open = false" />
   </Disclosure>
 </template>
-<script setup>
+<script setup lang="ts">
 import {Disclosure} from "@headlessui/vue";
 import Bars3Icon from "~/icons/Bars3Icon.vue";
 import Logo from "~/icons/Logo.vue";
@@ -41,4 +41,15 @@ watch(
       currentRoute.value = route.path;
     },
 );
+
+defineProps({
+  hero: {
+    type: Object ,
+    default: () => ({} as Hero),
+  },
+  contactInformation: {
+    type: Object ,
+    default: () => ({} as contactInformation),
+  }
+})
 </script>

@@ -15,6 +15,9 @@ module.exports = {
             colors: {
                 'primary': '#BE0F0F',
                 'passive-gray': '#6B7280'
+            },
+            fontFamily: {
+                'didact': ['"Didact Gothic"', 'sans-serif']
             }
         }
     },

@@ -2,6 +2,7 @@
 import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
+  css: ['~/assets/css/fonts.css'],
   site: {
     indexable: process.env.NODE_ENV === 'production',
     url: 'https://mdk-studio.nl',
@@ -56,5 +57,11 @@ export default defineNuxtConfig({
       '2xl': 1536
     },
     domains: ['http://localhost:1337/']
-  }
+  },
+  image: {
+    provider: 'strapi',
+    strapi: {
+      baseURL: 'http://localhost:1337'
+    }
+  },
 });
