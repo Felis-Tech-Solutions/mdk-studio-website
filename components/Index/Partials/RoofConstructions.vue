@@ -1,0 +1,25 @@
+<template>
+  <div class="mt-12 sm:mt-8 ">
+    <div>
+      <div class="flex flex-col">
+        <h2 class="font-bold xl:text-3xl 2xl:text-[32px] text-lg">
+          {{  roofConstructionData.title }}
+        </h2>
+        <hr class="border-b-8 border-primary w-64 lg:w-96 rounded-2xl">
+      </div>
+      <div class="mt-2 lg:mt-12 flex justify-between flex-col lg:flex-row">
+        <RoofOfConstructionBox :roof-construction-component-data="roofConstructionComponent" v-for="roofConstructionComponent in roofConstructionData.roofConstructionComponent"/>
+      </div>
+    </div>
+  </div>
+</template>
+<script setup lang="ts">
+import RoofOfConstructionBox from "~/components/Index/Partials/RoofConstructionBox.vue";
+
+defineProps({
+  roofConstructionData: {
+    type: String,
+    required: true
+  },
+})
+</script>

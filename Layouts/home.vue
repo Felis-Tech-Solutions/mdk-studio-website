@@ -3,12 +3,11 @@
     <ErrorComponent/>
   </div>
   <div v-else>
-    <div class="h-screen">
-      <Header class="h-1/6" :hero="HeroComponentApiResponse.data.attributes" :contactInformation="ContactInformationApiResponse.data"/>
+    <div class="lg:h-screen">
+      <Header class="lg:h-1/6 h-32" :hero="HeroComponentApiResponse.data.attributes" :contactInformation="ContactInformationApiResponse.data"/>
       <Hero :hero="HeroComponentApiResponse.data.attributes"/>
     </div>
     <slot/>
-
     <Footer />
   </div>
 

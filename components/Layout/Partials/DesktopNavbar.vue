@@ -1,13 +1,13 @@
 <template>
   <nav class="w-full flex justify-between">
-    <div class="w-screen flex justify-end pr-12 xl:pr-16 lg:pt-4 2xl:pt-0 ">
+    <div class="flex justify-end pr-12 lg:-mr-42 lg:pt-4 mt-3 2xl:mt-0">
       <ContactInfo :contactInformation="contactInformation"/>
     </div>
     <div class="flex justify-center items-center xl:pt-4">
       <a href="/">
-        <Logo class="h-16 md:h-10 md:h-12 xl:h-16 hidden md:block hover:cursor-pointer md:pt-1 lg:pt-0"/>
+        <Logo class="h-16 md:h-10 xl:h-16 hidden md:block hover:cursor-pointer md:pt-1 lg:pt-0"/>
       </a>
-      <div class="hidden ml-8 md:ml-14 sm:flex sm:space-x-8 md:space-x-4 lg:space-x-8 items-center">
+      <div class="hidden ml-8 md:ml-14 sm:flex sm:space-x-8 md:space-x-2 lg:space-x-8 items-center">
         <NuxtLink
             v-for="item in navigation"
             :key="item.name"
