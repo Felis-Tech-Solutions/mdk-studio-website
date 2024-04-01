@@ -1,5 +1,5 @@
 <template>
-  <div class="md:max-w-screen h-auto flex flex-col md:flex-row md:px-80 md:py-36 bg-primary text-white gap-x-20 mt-8 lg:mt-0">
+  <div class="md:max-w-screen h-auto flex flex-col md:flex-row md:px-80 md:py-36 bg-primary text-white gap-x-20 mt-8 lg:mt-0 pb-10 md:pb-0">
     <div class="md:w-1/2 px-8 lg:px-0 pt-6 lg:pt-0">
       <NuxtImg
           provider="strapi"
@@ -16,7 +16,7 @@
         {{ imageWithTextData.title }}
       </span>
       <hr class="border-b-8 border-white w-40 rounded-2xl">
-      <div class="mt-2 leading-6 md:leading-7">
+      <div class="mt-2 leading-6 md:leading-7 text-sm md:text-base">
         {{ imageWithTextData.description }}
       </div>
     </div>
