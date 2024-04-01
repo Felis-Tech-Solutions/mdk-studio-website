@@ -7,7 +7,6 @@
           alt="hero-image"
           class="nuxt-img-responsive"
           fit='cover'
-          loading="lazy"
           format='webp'
           quality="auto"
       />

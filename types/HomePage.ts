@@ -1,9 +1,16 @@
-// Interface for Roadmap Steps
+// Interface for the basic Information Block within attributes
+interface InformationBlock {
+    id: number;
+    title: string;
+    subtitle: string;
+}
+
+// Interface for Roadmap Steps with updated icon names
 interface RoadmapStep {
     id: number;
     title: string;
     description: string;
-    icon: string;
+    icon: string; // Icons are now more specific, e.g., "MeetingWithLaptopIcon"
 }
 
 // Interface for the Roadmap section
@@ -13,7 +20,7 @@ interface Roadmap {
     roadmapSteps: RoadmapStep[];
 }
 
-// Interface for the Image Formats (thumbnails, medium, etc.)
+// Interface for Image Formats (e.g., thumbnail, small, medium, large)
 interface ImageFormat {
     name: string;
     hash: string;
@@ -27,19 +34,14 @@ interface ImageFormat {
     url: string;
 }
 
-// Interface for the Image Attributes
+// Interface for Image Attributes including formats
 interface ImageAttributes {
     name: string;
     alternativeText: null | string;
     caption: null | string;
     width: number;
     height: number;
-    formats: {
-        thumbnail?: ImageFormat;
-        small?: ImageFormat;
-        medium?: ImageFormat;
-        large?: ImageFormat;
-    };
+    formats: Record<string, ImageFormat>;
     hash: string;
     ext: string;
     mime: string;
@@ -52,22 +54,30 @@ interface ImageAttributes {
     updatedAt: string;
 }
 
-// Interface for Roof Construction Component Images
-interface RoofConstructionComponentImage {
+// Interface for the Image Data Wrapper
+interface ImageData {
     data: {
         id: number;
         attributes: ImageAttributes;
     };
 }
 
-// Interface for Roof Construction Components
+// Interface for the Roof Construction Component including Image Data
 interface RoofConstructionComponent {
     id: number;
     title: string;
-    image: RoofConstructionComponentImage;
+    image: ImageData;
 }
 
-// Interface for the attributes of the HomePage
+// Interface for the About Us section including Image Data
+interface AboutUs {
+    id: number;
+    title: string;
+    description: string;
+    image: ImageData;
+}
+
+// Interface for the attributes in the HomePage data structure
 interface HomePageAttributes {
     title: string;
     createdAt: string;
@@ -79,15 +89,16 @@ interface HomePageAttributes {
         title: string;
         roofConstructionComponent: RoofConstructionComponent[];
     };
+    aboutUs: AboutUs;
 }
 
-// Interface for the main data structure of the HomePage
+// Interface for the main data structure of HomePage
 interface HomePageData {
     id: number;
     attributes: HomePageAttributes;
 }
 
-// Interface for the entire API response for the HomePage
+// Interface for the entire API response for HomePage
 export interface HomePageApiResponse {
     data: HomePageData;
     meta: {};

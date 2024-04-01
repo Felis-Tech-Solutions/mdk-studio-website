@@ -6,7 +6,7 @@
           {{ roofConstructionComponentData.title }}
         </span>
       </div>
-      <div class="h-4/6 responsive-image-wrapper border">
+      <div class="lg:h-4/6 responsive-image-wrapper">
         <NuxtImg
             provider="strapi"
             :src="roofConstructionComponentData.image.data.attributes.url"
@@ -26,7 +26,6 @@
             <RightArrowIcon class="h-4 w-4 lg:h-5 lg:w-5 pt-1"/>
         </div>
       </div>
-2
   </a>
 </template>
 <script setup lang="ts">
@@ -57,7 +56,7 @@ defineProps({
 @media (max-width: 768px) {
   .nuxt-img-responsive {
     width: 100%; /* Adjust width and height as necessary */
-    height: auto;
+    height: 5100px;
   }
 }
 </style>
