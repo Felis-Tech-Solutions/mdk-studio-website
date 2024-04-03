@@ -5,7 +5,6 @@
 import HomePage from "~/components/Index/HomePage.vue";
 import { type HomePageApiResponse } from "~/types/HomePage";
 
-const ErrorComponent = defineAsyncComponent(() => import("~/components/Error/ErrorComponent.vue"));
 const strapiBaseBaseUri = inject('strapiBaseBaseUri');
 
 definePageMeta({

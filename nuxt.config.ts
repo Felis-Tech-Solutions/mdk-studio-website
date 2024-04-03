@@ -43,6 +43,10 @@ export default defineNuxtConfig({
     },
   },
   image: {
+    provider: 'strapi',
+    strapi: {
+      baseURL: 'http://localhost:1337'
+    },
     inject: true,
     quality: 100,
     format: ['webp'],
@@ -56,11 +60,5 @@ export default defineNuxtConfig({
       '2xl': 1536
     },
     domains: ['http://localhost:1337/']
-  },
-  image: {
-    provider: 'strapi',
-    strapi: {
-      baseURL: 'http://localhost:1337'
-    }
   },
 });
