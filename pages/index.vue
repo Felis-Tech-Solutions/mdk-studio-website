@@ -12,7 +12,7 @@ definePageMeta({
   layout: 'home'
 })
 
-const { data: HomePageApiResponse, pending: isLoading, error } = useFetch<HeroComponentApiResponse>(
+const { data: HomePageApiResponse, pending: isLoading, error } = useFetch<HomePageApiResponse>(
     `${strapiBaseBaseUri}/home-page?populate[Roadmap][populate]=*&populate[roofConstructionComponent][populate][roofConstructionComponent][populate][image]=*&populate[aboutUs][populate]=*&populate[informationBlocks][populate]=*`
 )
 </script>
