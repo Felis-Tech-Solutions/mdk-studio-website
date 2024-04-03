@@ -2,7 +2,6 @@
 import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
-  css: ['~/assets/css/fonts.css'],
   site: {
     indexable: process.env.NODE_ENV === 'production',
     url: 'https://mdk-studio.nl',
