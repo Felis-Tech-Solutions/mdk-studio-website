@@ -1,12 +1,12 @@
 <template>
   <div class="flex flex-col lg:gap-y-32 h-full lg:mt-32">
-    <div class="px-6 lg:px-24 2xl:px-32 flex flex-col lg:gap-y-32">
-      <RoofConstructions :roof-construction-data="pageData.roofConstructionComponent"/>
-    </div>
-    <ImageWithText :image-with-text-data="pageData.aboutUs"/>
-    <div class="px-6 lg:px-24 2xl:px-32 flex flex-col lg:gap-y-32">
-      <InformationBlocks :information-blocks-data="pageData.informationBlocks"/>
-    </div>
+<!--    <div class="px-6 lg:px-24 2xl:px-32 flex flex-col lg:gap-y-32">-->
+<!--      <RoofConstructions :roof-construction-data="pageData.roofConstructionComponent"/>-->
+<!--    </div>-->
+<!--    <ImageWithText :image-with-text-data="pageData.aboutUs"/>-->
+<!--    <div class="px-6 lg:px-24 2xl:px-32 flex flex-col lg:gap-y-32">-->
+<!--      <InformationBlocks :information-blocks-data="pageData.informationBlocks"/>-->
+<!--    </div>-->
   </div>
 </template>
 <script setup lang="ts">

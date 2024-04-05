@@ -1,5 +1,5 @@
 <template>
-<!--  <HomePage :page-data="HomePageApiResponse.data.attributes"/>-->
+  <HomePage :page-data="HomePageApiResponse.data.attributes"/>
 </template>
 <script setup lang="ts">
 import HomePage from "~/components/Index/HomePage.vue";
