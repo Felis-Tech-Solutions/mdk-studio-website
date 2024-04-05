@@ -3,7 +3,7 @@
       <div class="bg-[#252323]">
         <div class="pt-12 lg:pt-44 lg:px-40 grid grid-cols-1 md:grid-cols-6">
           <div class="col-span-2 flex justify-center md:block">
-            <LightLogo class="w-[300px] lg:w-[388px]"/>
+            <LightLogo class="w-[300px] xl:w-[325px] 2xl:w-[388px]"/>
           </div>
         <div class="flex flex-col gap-y-4 col-span-2 md:col-span-1 items-center md:items-start mt-10 md:mt-0">
           <span class="text-[#9CA3AF] uppercase">
