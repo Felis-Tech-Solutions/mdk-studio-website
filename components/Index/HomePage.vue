@@ -3,7 +3,7 @@
     <div class="px-6 lg:px-24 2xl:px-32 flex flex-col lg:gap-y-32">
       <RoofConstructions :roof-construction-data="pageData.roofConstructionComponent"/>
     </div>
-<!--    <ImageWithText :image-with-text-data="pageData.aboutUs"/>-->
+    <ImageWithText :image-with-text-data="pageData.aboutUs"/>
 <!--    <div class="px-6 lg:px-24 2xl:px-32 flex flex-col lg:gap-y-32">-->
 <!--      <InformationBlocks :information-blocks-data="pageData.informationBlocks"/>-->
 <!--    </div>-->
