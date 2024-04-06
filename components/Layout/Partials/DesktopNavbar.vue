@@ -1,7 +1,7 @@
 <template>
   <nav class="w-full flex justify-between">
     <div class="flex justify-end pr-12 lg:-mr-42 lg:pt-4 mt-3 2xl:mt-0">
-      <ContactInfo :contactInformation="contactInformation"/>
+      <ContactInfo :contactInformation="contactInformation" v-if="contactInformation"/>
     </div>
     <div class="flex justify-center items-center xl:pt-4">
       <a href="/">

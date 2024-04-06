@@ -53,7 +53,7 @@
         </div>
         <hr class="border my-8 border-[#4B5563] mx-6">
         <div class="flex justify-center items-center pt-4 pb-32">
-          <span class="text-[#9CA3AF]">
+          <span class="text-[#9CA3AF] mx-8 md:mx-0">
             @ 2024 Felis Tech Solutions - DKDesigns, Inc. All rights reserved.
           </span>
 
