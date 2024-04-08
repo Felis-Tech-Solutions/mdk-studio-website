@@ -14,9 +14,6 @@
   <div v-else>
     <div class="lg:h-screen">
       <Header class="lg:h-1/6 h-32" v-if="HeroComponentApiResponse.data && ContactInformationApiResponse.data" :hero="HeroComponentApiResponse.data.attributes" :contactInformation="ContactInformationApiResponse.data"/>
-      <h1>
-        Header
-      </h1>
       <Hero v-if="HeroComponentApiResponse.data" :hero="HeroComponentApiResponse.data.attributes"/>
     </div>
     <slot/>
