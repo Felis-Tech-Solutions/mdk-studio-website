@@ -6,6 +6,9 @@
     Loading
   </div>
   <div v-else>
+    <h1>
+      Homepage
+    </h1>
     <HomePage :page-data="HomePageApiResponse.data.attributes" v-if="HomePageApiResponse"/>
   </div>
 </template>
