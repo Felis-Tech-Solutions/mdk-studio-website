@@ -28,11 +28,11 @@ const open = ref(false)
 
 const navigation = [
   { name: 'Homepagina', href: '/', current: false },
-  { name: 'Dakkapellen', href: '/board', current: false },
-  { name: 'Kozijnen', href: '/committee', current: false },
-  { name: 'Portfolio', href: '/partners', current: false },
-  { name: 'Contact', href: '/documents', current: false },
-  { name: 'Offerte aanvragen', href: '/gallery', current: false , button: 'button' },
+  { name: 'Dakkapellen', href: '/dakkapellen', current: false },
+  { name: 'Kozijnen', href: '/', current: false },
+  { name: 'Portfolio', href: '/', current: false },
+  { name: 'Contact', href: '/', current: false },
+  { name: 'Offerte aanvragen', href: '/', current: false , button: 'button' },
 ]
 
 watch(

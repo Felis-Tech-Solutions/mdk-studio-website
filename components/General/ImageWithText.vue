@@ -1,9 +1,12 @@
 <template>
-  <div class="md:max-w-screen h-auto flex flex-col lg:flex-row px-0 md:px-24 lg:px-52 2xl:px-[18vw] md:py-32 bg-primary text-white gap-x-20 mt-8 lg:mt-0 pb-10">
+  <div
+      class="md:max-w-screen h-auto flex flex-col  px-0 md:px-24 lg:px-52 2xl:px-[18vw] md:py-32 gap-x-20 mt-8 lg:mt-0 pb-10"
+      :class="imageWithTextData.imageType === 'ImageRight' ? 'lg:flex-row-reverse ' : 'lg:flex-row bg-primary text-white'"
+  >
     <div class="lg:w-1/2 px-8 lg:px-0 pt-6 lg:pt-0 2xl:mx-24">
       <NuxtImg
           provider="strapi"
-          class="w-full 2xl:w-[45rem] h-[30rem] 2xl:h-[25rem] object-cover rounded-2xl"
+          class="w-full 2xl:w-[45rem] h-[20rem] 2xl:h-[30rem] object-cover rounded-2xl"
           fit='cover'
           loading="lazy"
           format='webp'
@@ -12,17 +15,30 @@
       />
     </div>
     <div class="lg:w-1/2 flex items-center md:items-start flex-col mt-4 md:mt-0 px-6 md:px-0">
-      <span class="text-[32px]">
-        {{ imageWithTextData.title }}
-      </span>
-      <hr class="border-b-8 border-white w-40 rounded-2xl">
-      <div class="mt-2 leading-6 md:leading-7 text-sm md:text-base">
+      <div class="w-auto">
+        <span class="text-[32px] pr-24 font-bold">
+          {{ imageWithTextData.title }}
+        </span>
+        <hr class="border-b-8 w-full rounded-2xl" :class="imageWithTextData.imageType === 'ImageRight' ? 'border-primary' : 'border-white'">
+      </div>
+      <div class="mt-6 leading-6 md:leading-7 text-sm md:text-base">
         {{ imageWithTextData.description }}
       </div>
+      <a
+          v-if="imageWithTextData.buttonText"
+          href="/"
+          class="border rounded-lg bg-primary md:text-sm lg:text-base py-3 px-8 mt-10"
+          :class="imageWithTextData.imageType === 'ImageRight' ? 'bg-primary hover:bg-[#990c0c] text-white' : 'bg-white text-primary hover:bg-gray-200'"
+      >
+        {{ imageWithTextData.buttonText }}
+      </a>
+
     </div>
   </div>
 </template>
 <script setup lang="ts">
+
+
 defineProps({
   imageWithTextData: {
     type: String,

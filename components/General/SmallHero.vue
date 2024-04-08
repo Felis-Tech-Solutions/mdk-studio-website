@@ -1,19 +1,19 @@
 <template>
-  <div class="relative md:h-4/6 overflow-hidden -mt-10 md:mt-0">
+  <div class="relative md:h-[35vh] overflow-hidden -mt-10 md:mt-0">
     <div class="responsive-image-wrapper">
       <NuxtImg
           v-if="hero.image"
           provider="strapi"
           :src="hero.image.data.attributes.formats.large.url"
           alt="hero-image"
-          class="nuxt-img-responsive pb-56"
-          fit='cover'
+          class="nuxt-img-responsive object-bottom md:pb-56"
+          fit='inside'
           format='webp'
           quality="auto"
       />
     </div>
     <div class="absolute top-0 left-0 bottom-0 w-1/2 bg-black bg-opacity-75 flex justify-center items-center flex-col">
-      <div class="pl-4 md:pl-0 md:h-80">
+      <div class="pl-4 md:pl-0 ">
         <h1 class="text-white text-2xl md:text-[54px] break-words md:w-96 font-didact md:leading-[55px]" v-if="hero.title">
           {{ hero.title }}
         </h1>
@@ -24,9 +24,6 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="bg-primary h-1/6 flex justify-around items-center 2xl:px-52">
-    <InfoComponent v-if="hero.informationBlocks" v-for="info in hero.informationBlocks" :title="info.title" :sub-title="info.subtitle"/>
   </div>
 </template>
 <script setup lang="ts">

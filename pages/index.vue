@@ -1,5 +1,13 @@
 <template>
-  <HomePage :page-data="HomePageApiResponse.data.attributes" v-if="HomePageApiResponse"/>
+  <div v-if="error">
+    Error
+  </div>
+  <div v-else-if="isLoading">
+    Loading
+  </div>
+  <div v-else>
+    <HomePage :page-data="HomePageApiResponse.data.attributes" v-if="HomePageApiResponse"/>
+  </div>
 </template>
 <script setup lang="ts">
 import HomePage from "~/components/Index/HomePage.vue";
