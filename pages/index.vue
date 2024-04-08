@@ -6,12 +6,7 @@
     Loading
   </div>
   <div v-else>
-    <h1>
-      Homepage
-    </h1>
-    <NuxtLayout :name="home">
-      <HomePage :page-data="HomePageApiResponse.data.attributes" v-if="HomePageApiResponse"/>
-    </NuxtLayout>
+    <HomePage :page-data="HomePageApiResponse.data.attributes" v-if="HomePageApiResponse"/>
   </div>
 </template>
 <script setup lang="ts">
@@ -19,10 +14,10 @@ import HomePage from "~/components/Index/HomePage.vue";
 import { type HomePageApiResponse } from "~/types/HomePage";
 
 const strapiBaseBaseUri = inject('strapiBaseBaseUri');
-const home = 'home';
-// definePageMeta({
-//   layout: 'home'
-// })
+
+definePageMeta({
+  layout: 'home'
+})
 
 const { data: HomePageApiResponse, pending: isLoading, error } = useFetch<HomePageApiResponse>(
     `${strapiBaseBaseUri}/home-page?populate[Roadmap][populate]=*&populate[roofConstructionComponent][populate][roofConstructionComponent][populate][image]=*&populate[aboutUs][populate]=*&populate[informationBlocks][populate]=*`
