@@ -4,14 +4,14 @@
   </div>
   <div v-else>
     <div class="lg:h-screen">
-      {{HeroComponentApiResponse.data}}
-      <hr>
-      {{ContactInformationApiResponse.data}}
-      <hr>
-      {{HeroComponentApiResponse.data}}
       <Header class="lg:h-1/6 h-32" v-if="HeroComponentApiResponse.data && ContactInformationApiResponse.data" :hero="HeroComponentApiResponse.data.attributes" :contactInformation="ContactInformationApiResponse.data"/>
       <Hero v-if="HeroComponentApiResponse.data" :hero="HeroComponentApiResponse.data.attributes"/>
     </div>
+    {{HeroComponentApiResponse.data}}
+    <hr>
+    {{ContactInformationApiResponse.data}}
+    <hr>
+    {{HeroComponentApiResponse.data}}
     <slot/>
     <Footer />
   </div>
