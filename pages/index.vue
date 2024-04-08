@@ -1,6 +1,6 @@
 <template>
   <div v-if="error">
-    Error
+    <ErrorComponent/>
   </div>
   <div v-else-if="isLoading">
     Loading

@@ -2,6 +2,9 @@
 <div v-if="error || contactError">
     <ErrorComponent/>
   </div>
+  <div v-else-if="isLoading">
+    Loading
+  </div>
   <div v-else class="lg:h-screen">
     <Header class="lg:h-1/6 h-32" v-if="HeroComponentApiResponse.data && ContactInformationApiResponse.data" :hero="HeroComponentApiResponse.data.attributes" :contactInformation="ContactInformationApiResponse.data"/>
     <slot/>
