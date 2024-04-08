@@ -19,7 +19,7 @@ import HomePage from "~/components/Index/HomePage.vue";
 import { type HomePageApiResponse } from "~/types/HomePage";
 
 const strapiBaseBaseUri = inject('strapiBaseBaseUri');
-
+const home = 'home';
 // definePageMeta({
 //   layout: 'home'
 // })
