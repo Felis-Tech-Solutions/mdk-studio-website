@@ -9,7 +9,7 @@
     <h1>
       Homepage
     </h1>
-    <NuxtLayout>
+    <NuxtLayout :name="home">
       <HomePage :page-data="HomePageApiResponse.data.attributes" v-if="HomePageApiResponse"/>
     </NuxtLayout>
   </div>
