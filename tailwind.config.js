@@ -4,7 +4,7 @@ module.exports = {
     content: [
         "./components/**/*.{js,vue,ts}",
         "./components/**/**/*.{js,vue,ts}",
-        "./Layouts/**/*.vue",
+        "./layouts/**/*.vue",
         "./pages/**/*.vue",
         "./plugins/**/*.{js,ts}",
         "./app.vue",
@@ -18,6 +18,16 @@ module.exports = {
             },
             fontFamily: {
                 'didact': ['"Didact Gothic"', 'sans-serif']
+            },
+            screens: {
+                'xs': '375px',
+                'sm': '640px',
+                'md': '768px',
+                'lg': '1024px',
+                'xl': '1280px',
+                '2xl': '1536px',
+                '3xl': '1920px',
+                '4xl': '2560px',
             }
         }
     },

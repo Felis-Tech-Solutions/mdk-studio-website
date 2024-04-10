@@ -1,18 +1,18 @@
 <template>
-<!--  <a href="/" class="w-[250px] lg:w-[300px] xl:w-[350px] 2xl:w-[400px] h-[340px] rounded-t-2xl shadow-2xl hover:cursor-pointer text-white hover:text-gray-400">-->
   <a href="/" class="lg:w-[25vw] rounded-t-2xl shadow-2xl hover:cursor-pointer text-white hover:text-gray-400 rounded-b-2xl mt-4 lg:mt-0 ">
       <div class="h-12 lg:h-1/6 text-base font-semibold flex justify-center items-center">
         <span class="text-primary">
           {{ roofConstructionComponentData.title }}
         </span>
       </div>
-      <div class="lg:h-4/6 responsive-image-wrapper">
+      <div class="">
         <NuxtImg
             provider="strapi"
             :src="roofConstructionComponentData.image.data.attributes.url"
             alt="hero-image"
-            class="nuxt-img-responsive"
-            fit='cover'
+            fit="contain"
+            height=300
+            width=400
             loading="lazy"
             format='webp'
             quality="auto"
@@ -49,8 +49,6 @@ defineProps({
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   object-fit: cover; /* Ensure the image covers the container without losing aspect ratio */
 }
 @media (max-width: 768px) {
