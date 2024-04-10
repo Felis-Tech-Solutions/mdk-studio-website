@@ -6,7 +6,9 @@
     Loading
   </div>
   <div v-else>
-    <HomePage :page-data="HomePageApiResponse.data.attributes" v-if="HomePageApiResponse"/>
+    <NuxtLayout>
+      <HomePage :page-data="HomePageApiResponse.data.attributes" v-if="HomePageApiResponse"/>
+    </NuxtLayout>
   </div>
 </template>
 <script setup lang="ts">
