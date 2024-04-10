@@ -6,14 +6,14 @@
         </span>
       </div>
       <div class="">
-        <NuxtImg
+        <NuxtPicture
             provider="strapi"
             :src="roofConstructionComponentData.image.data.attributes.url"
             alt="hero-image"
-            fit="contain"
-            height=300
-            width=400
             loading="lazy"
+            width='620px'
+            height='1080px'
+            fit='outside'
             format='webp'
             quality="auto"
         />

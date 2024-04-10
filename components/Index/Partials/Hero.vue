@@ -7,7 +7,10 @@
           :src="hero.image.data.attributes.formats.large.url"
           alt="hero-image"
           class="nuxt-img-responsive pb-56"
-          fit='cover'
+          sizes='xs:300px sm:500px md:700px lg:1200px xl:1920px'
+          width='1920px'
+          height='1080px'
+          fit='outside'
           format='webp'
           quality="auto"
       />
