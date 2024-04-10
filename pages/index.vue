@@ -7,13 +7,17 @@
   </div>
   <div v-else>
     <NuxtLayout>
-      <HomePage :page-data="HomePageApiResponse.data.attributes" v-if="HomePageApiResponse"/>
+    <HomePage :page-data="HomePageApiResponse.data.attributes" v-if="HomePageApiResponse"/>
     </NuxtLayout>
   </div>
 </template>
 <script setup lang="ts">
 import HomePage from "~/components/Index/HomePage.vue";
 import { type HomePageApiResponse } from "~/types/HomePage";
+
+definePageMeta({
+  layout: 'default'
+})
 
 const strapiBaseBaseUri = inject('strapiBaseBaseUri');
 
