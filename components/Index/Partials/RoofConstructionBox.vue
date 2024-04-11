@@ -5,7 +5,7 @@
           {{ roofConstructionComponentData.title }}
         </span>
       </div>
-      <div class="md:h-80 overflow-hidden">
+      <div class="md:max-h-48 2xl:max-h-80 overflow-hidden">
         <NuxtPicture
             provider="strapi"
             :src="roofConstructionComponentData.image.data.attributes.url"
