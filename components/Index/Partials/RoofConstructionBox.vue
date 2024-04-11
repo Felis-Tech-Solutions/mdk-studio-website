@@ -5,20 +5,20 @@
           {{ roofConstructionComponentData.title }}
         </span>
       </div>
-      <div class="">
+      <div class="md:h-80 overflow-hidden">
         <NuxtPicture
             provider="strapi"
             :src="roofConstructionComponentData.image.data.attributes.url"
             alt="hero-image"
             loading="lazy"
-            width='620px'
+            class=" rounded overflow-hidden z-0 object-contain "
+            width='1820px'
             height='1080px'
-            fit='outside'
             format='webp'
             quality="auto"
         />
       </div>
-      <div class="h-12 lg:h-1/6 bg-primary flex justify-center items-center rounded-b-2xl">
+      <div class="h-12 lg:h-1/6 bg-primary flex justify-center items-center rounded-b-2xl z-10">
         <div class="flex items-center">
            <span class="text-base underline underline-offset-4">
             Lees meer
