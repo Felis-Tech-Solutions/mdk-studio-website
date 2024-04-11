@@ -8,7 +8,9 @@
         <hr class="border-b-8 border-primary w-64 lg:w-96 rounded-2xl">
       </div>
       <div class="mt-2 lg:mt-12 flex justify-between flex-col lg:flex-row">
-        <RoofOfConstructionBox :roof-construction-component-data="roofConstructionComponent" v-for="roofConstructionComponent in roofConstructionData.roofConstructionComponent"/>
+        <RoofOfConstructionBox :roof-construction-component-data="roofConstructionData.roofConstructionComponent[0]" link-to-page="/deuren-kozijnen"/>
+        <RoofOfConstructionBox :roof-construction-component-data="roofConstructionData.roofConstructionComponent[1]" link-to-page="/ramen-kozijnen"/>
+        <RoofOfConstructionBox :roof-construction-component-data="roofConstructionData.roofConstructionComponent[2]" link-to-page="/schuifpuien-kozijnen"/>
       </div>
     </div>
   </div>

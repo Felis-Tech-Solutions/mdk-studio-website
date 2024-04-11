@@ -1,5 +1,5 @@
 <template>
-  <a href="/" class="lg:w-[25vw] 2xl:w-[18vw] 3xl:w-[20vw] 4xl:w-[20vw] rounded-t-2xl shadow-2xl hover:cursor-pointer text-white hover:text-gray-400 rounded-b-2xl mt-4 lg:mt-0 ">
+  <NuxtLink :to="linkToPage" class="lg:w-[25vw] 2xl:w-[18vw] 3xl:w-[20vw] 4xl:w-[20vw] rounded-t-2xl shadow-2xl hover:cursor-pointer text-white hover:text-gray-400 rounded-b-2xl mt-4 lg:mt-0 ">
       <div class="h-12 lg:h-1/6 text-base font-semibold flex justify-center items-center">
         <span class="text-primary">
           {{ roofConstructionComponentData.title }}
@@ -26,7 +26,7 @@
             <RightArrowIcon class="h-4 w-4 lg:h-5 lg:w-5 pt-1"/>
         </div>
       </div>
-  </a>
+  </NuxtLink>
 </template>
 <script setup lang="ts">
 import RightArrowIcon from "~/icons/RightArrowIcon.vue";
@@ -36,6 +36,10 @@ defineProps({
     type: String,
     required: true
   },
+  linkToPage: {
+    type: String,
+    default: '/'
+  }
 })
 </script>
 
