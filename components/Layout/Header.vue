@@ -29,7 +29,7 @@ const open = ref(false)
 const navigation = [
   { name: 'Homepagina', href: '/', current: false },
   { name: 'Dakkapellen', href: '/dakkapellen', current: false },
-  { name: 'Kozijnen', href: '/', current: false },
+  { name: 'Kozijnen', href: '/kozijnen', current: false },
   { name: 'Portfolio', href: '/', current: false },
   { name: 'Contact', href: '/', current: false },
   { name: 'Offerte aanvragen', href: '/', current: false , button: 'button' },

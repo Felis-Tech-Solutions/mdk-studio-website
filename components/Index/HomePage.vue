@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col lg:gap-y-32 h-full lg:mt-24">
-    <div class="px-6 lg:px-24 3xl:px-32 flex flex-col lg:gap-y-32 lg:mb-24">
+    <div class="px-6 lg:px-24 xl:px-40 2xl:px-60 3xl:px-72 4xl:px-80 flex flex-col lg:gap-y-32 lg:mb-24">
       <RoofConstructions :roof-construction-data="pageData.roofConstructionComponent" v-if="pageData.roofConstructionComponent" class="2xl:mx-24"/>
     </div>
     <ImageWithText :image-with-text-data="pageData.aboutUs" v-if="pageData.aboutUs"/>

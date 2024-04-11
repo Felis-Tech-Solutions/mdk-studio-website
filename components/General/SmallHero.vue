@@ -4,7 +4,7 @@
       <NuxtImg
           v-if="hero.image"
           provider="strapi"
-          :src="hero.image.data.attributes.formats.large.url"
+          :src="hero.image.data.attributes.url"
           alt="hero-image"
           class="nuxt-img-responsive object-bottom md:pb-56"
           fit='inside'
@@ -27,7 +27,6 @@
   </div>
 </template>
 <script setup lang="ts">
-import InfoComponent from "~/components/Index/Partials/InfoComponent.vue";
 
 defineProps({
   hero: {
