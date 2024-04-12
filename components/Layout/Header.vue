@@ -31,8 +31,8 @@ const navigation = [
   { name: 'Dakkapellen', href: '/dakkapellen', current: false },
   { name: 'Kozijnen', href: '/kozijnen', current: false },
   { name: 'Portfolio', href: '/', current: false },
-  { name: 'Contact', href: '/', current: false },
-  { name: 'Offerte aanvragen', href: '/', current: false , button: 'button' },
+  { name: 'Contact', href: '/contact', current: false },
+  { name: 'Offerte aanvragen', href: '/offerte-aanvragen', current: false , button: 'button' },
 ]
 
 watch(
