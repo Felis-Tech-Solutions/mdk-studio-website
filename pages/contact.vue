@@ -59,7 +59,7 @@
               </div>
               <div class="sm:col-span-2">
                 <div class="flex justify-between text-sm leading-6">
-                  <label for="phone" class="block font-semibold text-gray-900">Telfoon </label>
+                  <label for="phone" class="block font-semibold text-gray-900">Telefoon </label>
                   <p id="phone-description" class="text-gray-400">Optional</p>
                 </div>
                 <div class="mt-2.5">

@@ -24,14 +24,14 @@
       <div class="mt-6 leading-6 md:leading-7 text-sm md:text-base">
         {{ imageWithTextData.description }}
       </div>
-      <a
+      <NuxtLink to="/offerte-aanvragen"
           v-if="imageWithTextData.buttonText"
           href="/"
           class="border rounded-lg bg-primary md:text-sm lg:text-base py-3 px-8 mt-10"
           :class="imageWithTextData.imageType === 'ImageRight' ? 'bg-primary hover:bg-[#990c0c] text-white' : 'bg-white text-primary hover:bg-gray-200'"
       >
         {{ imageWithTextData.buttonText }}
-      </a>
+      </NuxtLink>
 
     </div>
   </div>

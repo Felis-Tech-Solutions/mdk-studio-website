@@ -46,9 +46,11 @@
           <span class="text-[#D1D5DB]">
             Vraag een vrijblijvende offerte aan of neem contact op met ons.
           </span>
-          <button class="bg-primary hover:bg-red-800 py-2 w-40 rounded-xl text-white text-sm md:text-base">
-            Offerte aanvragen
-          </button>
+          <NuxtLink to="/offerte-aanvragen">
+            <button class="bg-primary hover:bg-red-800 py-2 w-40 rounded-xl text-white text-sm md:text-base">
+              Offerte aanvragen
+            </button>
+          </NuxtLink>
         </div>
         </div>
         <hr class="border my-8 border-[#4B5563] mx-6">

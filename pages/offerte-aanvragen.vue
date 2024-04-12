@@ -6,7 +6,7 @@
     Loading...
   </div>
   <div class="relative bg-white" v-else>
-    <div class="lg:absolute lg:inset-0 lg:left-1/2 xl:mr-36 2xl:mr-56 3xl:mr-96 xl:h-[60rem] pt-16 lg:pt-32">
+    <div class="lg:absolute lg:inset-0 lg:left-1/2 xl:mr-36 2xl:mr-56 3xl:mr-96 xl:h-[60rem]">
       <NuxtImg
           provider="strapi"
           class="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full rounded"

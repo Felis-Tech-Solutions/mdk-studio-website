@@ -21,9 +21,11 @@
           {{ hero.title }}
         </h1>
         <div class="w-full pt-4">
-          <button class="bg-primary hover:bg-red-800 py-2 px-4 md:px-12 rounded text-white text-sm md:text-base">
-            Vraag offerte aan
-          </button>
+          <NuxtLink to="/offerte-aanvragen">
+            <button class="bg-primary hover:bg-red-800 py-2 px-4 md:px-12 rounded text-white text-sm md:text-base">
+              Vraag offerte aan
+            </button>
+          </NuxtLink>
         </div>
       </div>
     </div>
