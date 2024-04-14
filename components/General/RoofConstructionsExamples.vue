@@ -11,14 +11,6 @@
         :roof-construction-data="RoofConstructionsExampleComponent"
         v-for="RoofConstructionsExampleComponent in roofConstructionData.RoofConstructionsExampleComponent"
     />
-     <RoofExampleComponent
-         :roof-construction-data="RoofConstructionsExampleComponent"
-         v-for="RoofConstructionsExampleComponent in roofConstructionData.RoofConstructionsExampleComponent"
-     />
-     <RoofExampleComponent
-         :roof-construction-data="RoofConstructionsExampleComponent"
-         v-for="RoofConstructionsExampleComponent in roofConstructionData.RoofConstructionsExampleComponent"
-     />
    </div>
  </div>
 </template>
