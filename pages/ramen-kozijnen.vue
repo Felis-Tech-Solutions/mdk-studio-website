@@ -6,14 +6,12 @@
     loading
   </div>
   <div v-else>
-    <WindowFramesPage :pageData="pageData" v-if="pageData.data"/>
+    <WindowFramePage :pageData="pageData" v-if="pageData.data"/>
   </div>
 </template>
 <script setup>
-import SmallHero from "~/components/General/SmallHero.vue";
-import InformationBlocks from "~/components/General/InformationBlocks.vue";
-import ImageWithText from "~/components/General/ImageWithText.vue";
-import RoofConstructions from "~/components/Index/Partials/RoofConstructions.vue";
+
+import WindowFramePage from "~/components/WindowFrames/WindowFramePage.vue";
 
 const strapiBaseBaseUri = inject('strapiBaseBaseUri');
 
