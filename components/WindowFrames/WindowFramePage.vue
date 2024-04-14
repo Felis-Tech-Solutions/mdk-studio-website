@@ -7,7 +7,10 @@
     <div class="px-6 lg:px-24 3xl:px-96 flex flex-col lg:gap-y-32 lg:mb-24 pb-24">
       <RoofConstructions :roof-construction-data="pageData.data.attributes.roofConstructionComponent" v-if="pageData.data.attributes.roofConstructionComponent" class="2xl:mx-24"/>
     </div>
-    <ImageWithText :image-with-text-data="pageData.data.attributes.TextBlocks"/>
+    <ImageWithText :image-with-text-data="pageData.data.attributes.TextBlocks" v-if="pageData.data.attributes.TextBlocks"/>
+    <pre>
+      {{pageData}}
+    </pre>
   </div>
 </template>
 <script setup lang="ts">
