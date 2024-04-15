@@ -1,16 +1,13 @@
 <template>
   <div class="relative md:h-4/6 overflow-hidden -mt-10 md:mt-0">
-    <div class="responsive-image-wrapper">
+    <div>
       <NuxtImg
           v-if="hero.image"
           provider="strapi"
           :src="hero.image.data.attributes.formats.large.url"
           alt="hero-image"
-          class="nuxt-img-responsive pb-56"
-          sizes='xs:300px sm:500px md:700px lg:1200px xl:1920px'
-          width='1920px'
-          height='1080px'
-          fit='outside'
+          class="h-64 md:h-96 w-screen lg:h-[56rem] object-cover"
+          fit="contain"
           format='webp'
           quality="auto"
       />
@@ -44,25 +41,3 @@ defineProps({
   }
 })
 </script>
-
-<style>
-.responsive-image-wrapper {
-  position: relative;
-  width: 100%; /* Use 100% width for responsiveness */
-  padding-top: 56.25%; /* This is an example for a 16:9 aspect ratio (height / width * 100%) */
-}
-.nuxt-img-responsive {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure the image covers the container without losing aspect ratio */
-}
-@media (max-width: 768px) {
-  .nuxt-img-responsive {
-    width: 100%; /* Adjust width and height as necessary */
-    height: auto;
-  }
-}
-</style>
