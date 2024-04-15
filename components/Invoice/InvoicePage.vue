@@ -2,12 +2,9 @@
   <div class="lg:absolute lg:inset-0 lg:left-1/2 xl:mr-36 2xl:mr-56 3xl:mr-96 xl:h-[60rem]">
     <NuxtImg
         provider="strapi"
-        class="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full rounded"
+        class="h-64 w-[90rem] md:h-96 xl:w-[35rem] lg:h-[70rem] object-cover"
         :src="contactPageApiResponse.data.attributes.image.data.attributes.url"
-        sizes='xs:300px sm:500px md:700px lg:1200px xl:1920px'
-        width='1920px'
-        height='1080px'
-        fit='outside'
+        fit="cover"
         format='webp'
         quality='100'
     />

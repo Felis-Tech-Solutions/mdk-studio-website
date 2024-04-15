@@ -12,9 +12,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import BaseFeedbackMessage from "~/components/Base/BaseFeedbackMessage.vue";
-import BaseErrorMessage from "~/components/Base/BaseErrorMessage.vue";
-import BaseSpinner from "~/components/Base/BaseSpinner.vue";
+
 const strapiBaseBaseUri = inject('strapiBaseBaseUri');
 const { data: contactPageApiResponse, pending: isLoading, error,  } = useFetch(
     `${strapiBaseBaseUri}/invoice-page?populate[image][populate]=*`
