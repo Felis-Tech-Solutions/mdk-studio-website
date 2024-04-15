@@ -33,9 +33,6 @@
             Kozijnen
           </span>
           <span class="text-[#D1D5DB]">
-            Portfolio
-          </span>
-          <span class="text-[#D1D5DB]">
             Contact
           </span>
         </div>
