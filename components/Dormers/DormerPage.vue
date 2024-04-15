@@ -1,7 +1,7 @@
 <template>
   <div>
     <SmallHero v-if="data.data" :hero="data.data.attributes"/>
-    <div class="px-6 lg:px-24 2xl:px-96 flex flex-col lg:gap-y-32 md:py-24">
+    <div class="px-6 lg:px-24 3xl:px-96 flex flex-col lg:gap-y-32 md:py-24">
       <InformationBlocks :information-blocks-data="data.data.attributes.informationBlocks" v-if="data.data.attributes.informationBlocks" class="2xl:mx-24"/>
     </div>
     <ImageWithText :image-with-text-data="textBlock" v-for="textBlock in data.data.attributes.TextBlocks"/>

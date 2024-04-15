@@ -1,9 +1,9 @@
 <template>
   <div
-      class="md:max-w-screen h-auto flex flex-col px-0 md:px-24 lg:px-24 2xl:px-96 md:py-32 gap-x-20 mt-8 lg:mt-0 pb-10"
+      class="md:max-w-screen h-auto flex flex-col px-0 md:px-24 lg:px-24 3xl:px-96 md:py-32 gap-x-20 mt-8 lg:mt-0 pb-10"
       :class="imageWithTextData.imageType === 'ImageRight' ? 'lg:flex-row-reverse ' : 'lg:flex-row bg-primary text-white'"
   >
-    <div class="lg:w-1/2 px-8 lg:px-0 pt-12 pb-6 lg:[b-0 lg:pt-0 2xl:mx-24">
+    <div class="lg:w-1/2 px-8 lg:px-0 pt-12 pb-6 lg:[b-0 lg:pt-0 2xl:mx-24 lg:flex lg:items-center">
       <NuxtImg
           provider="strapi"
           class="w-full 2xl:w-[45rem] h-[20rem] 2xl:h-[30rem] object-cover rounded-2xl"
