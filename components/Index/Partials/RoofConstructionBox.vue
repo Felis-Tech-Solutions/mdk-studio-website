@@ -1,23 +1,35 @@
 <template>
-  <NuxtLink :to="linkToPage" class="lg:w-[25vw] 2xl:w-[18vw] 3xl:w-[20vw] 4xl:w-[20vw] rounded-t-2xl shadow-2xl hover:cursor-pointer text-white hover:text-gray-400 rounded-b-2xl mt-4 lg:mt-0 ">
+  <NuxtLink :to="linkToPage" class="lg:w-[25vw] 3xl:w-[20vw] 4xl:w-[20vw] rounded-t-2xl shadow-2xl hover:cursor-pointer text-white hover:text-gray-400 rounded-b-2xl mt-4 lg:mt-0 ">
       <div class="h-12 lg:h-1/6 text-base font-semibold flex justify-center items-center">
         <span class="text-primary">
           {{ roofConstructionComponentData.title }}
         </span>
       </div>
-      <div class="md:max-h-48 2xl:max-h-64 overflow-hidden">
-        <NuxtPicture
-            provider="strapi"
-            :src="roofConstructionComponentData.image.data.attributes.url"
-            alt="hero-image"
-            loading="lazy"
-            class="rounded overflow-hidden z-0 object-contain "
-            width='520px'
-            height='1080px'
-            format='webp'
-            quality="auto"
-        />
-      </div>
+<!--      <div class="md:max-h-48 2xl:max-h-64 overflow-hidden">-->
+<!--        <NuxtPicture-->
+<!--            provider="strapi"-->
+<!--            :src="roofConstructionComponentData.image.data.attributes.url"-->
+<!--            alt="hero-image"-->
+<!--            loading="lazy"-->
+<!--            class="rounded overflow-hidden z-0 object-contain"-->
+<!--            width='520px'-->
+<!--            height='1080px'-->
+<!--            format='webp'-->
+<!--            quality="auto"-->
+<!--        />-->
+<!--      </div>-->
+    <div>
+      <NuxtImg
+          provider="strapi"
+          :src="roofConstructionComponentData.image.data.attributes.url"
+          alt="hero-image"
+          loading="lazy"
+          class="h-64 w-[90rem] md:h-96 lg:h-[15rem] xl:w-[35rem] xl:h-[15rem] object-cover"
+          fit="cover"
+          format='webp'
+          quality="auto"
+      />
+    </div>
       <div class="h-12 lg:h-1/6 bg-primary flex justify-center items-center rounded-b-2xl z-10">
         <div class="flex items-center">
            <span class="text-base underline underline-offset-4">
