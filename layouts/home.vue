@@ -1,11 +1,5 @@
 <template>
-  <div v-if="error || contactError">
-    <ErrorComponent/>
-    <h1>
-      Error
-    </h1>
-  </div>
-  <div v-else-if="isLoading">
+  <div v-if="isLoading">
     <h1>
       Loading
     </h1>

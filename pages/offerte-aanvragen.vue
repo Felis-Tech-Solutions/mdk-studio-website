@@ -1,8 +1,5 @@
 <template>
-  <div v-if="error">
-    Error
-  </div>
-  <div v-else-if="isLoading">
+  <div v-if="isLoading">
     Loading...
   </div>
   <div class="relative bg-white" v-else>

@@ -1,9 +1,6 @@
 <template>
-  <div v-if="error || heroError">
-    <ErrorComponent/>
-  </div>
-  <div v-else-if="isLoading || isHeroLoading">
-    Loading
+  <div v-if="isLoading">
+    loading
   </div>
   <div v-else>
     <HomePage :page-data="HomePageApiResponse.data.attributes" v-if="HomePageApiResponse"/>

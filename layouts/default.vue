@@ -1,8 +1,5 @@
 <template>
-<div v-if="error || contactError">
-    <ErrorComponent/>
-  </div>
-  <div v-else-if="isLoading">
+  <div v-if="isLoading">
     Loading
   </div>
   <div v-else>
@@ -19,7 +16,7 @@ import Header from "~/components/Layout/Header.vue";
 import Footer from "~/components/Layout/Footer.vue";
 const strapiBaseBaseUri = inject('strapiBaseBaseUri');
 
-const { data: HeroComponentApiResponse, pending: isLoading, error } = useFetch(
+const { data: HeroComponentApiResponse, pending } = useFetch(
     `${strapiBaseBaseUri}/hero-component?populate[informationBlocks][populate]=*&populate[image][populate]=*`
 );
 
