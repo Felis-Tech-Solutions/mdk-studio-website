@@ -1,5 +1,9 @@
 <template>
-  <NuxtLink :to="linkToPage" class="lg:w-[25vw] 3xl:w-[20vw] 4xl:w-[20vw] rounded-t-2xl shadow-2xl hover:cursor-pointer text-white hover:text-gray-400 rounded-b-2xl mt-4 lg:mt-0 ">
+  <NuxtLink
+      :to="linkToPage"
+      class="lg:w-[25vw] 3xl:w-[20vw] 4xl:w-[20vw] rounded-t-2xl shadow-2xl hover:cursor-pointer text-white hover:text-gray-400 rounded-b-2xl mt-4 lg:mt-0"
+      aria-label="roof-construction-link"
+  >
       <div class="h-12 lg:h-1/6 text-base font-semibold flex justify-center items-center">
         <span class="text-primary">
           {{ roofConstructionComponentData.title }}
@@ -32,7 +36,7 @@ import RightArrowIcon from "~/icons/RightArrowIcon.vue";
 
 defineProps({
   roofConstructionComponentData: {
-    type: String,
+    type: Object,
     required: true
   },
   linkToPage: {

@@ -12,6 +12,7 @@
           format='webp'
           quality="auto"
           :src="imageWithTextData.image.data.attributes.url"
+          alt="image-with-text "
       />
     </div>
     <div class="lg:w-1/2 flex items-center md:items-start flex-col mt-4 md:mt-0 px-6 md:px-0">
@@ -24,11 +25,13 @@
       <div class="mt-6 leading-6 md:leading-7 text-sm md:text-base">
         {{ imageWithTextData.description }}
       </div>
-      <NuxtLink to="/offerte-aanvragen"
+      <NuxtLink
+          to="/offerte-aanvragen"
           v-if="imageWithTextData.buttonText"
           href="/"
           class="border rounded-lg bg-primary md:text-sm lg:text-base py-3 px-8 mt-10"
           :class="imageWithTextData.imageType === 'ImageRight' ? 'bg-primary hover:bg-[#990c0c] text-white' : 'bg-white text-primary hover:bg-gray-200'"
+          aria-label="offerte-aanvragen"
       >
         {{ imageWithTextData.buttonText }}
       </NuxtLink>
@@ -41,7 +44,7 @@
 
 defineProps({
   imageWithTextData: {
-    type: String,
+    type: Object,
     required: true
   },
 })

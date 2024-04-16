@@ -18,6 +18,7 @@
                 ? 'border rounded-3xl bg-primary md:text-sm lg:text-base py-2 px-4 text-white hover:bg-[#990c0c]'
                 : 'inline-flex items-center font-medium h-10 hover:text-gray-700 hover:border-b-2 hover:border-primary text-passive-gray w-auto text-xl md:text-sm lg:text-base'"
                       activeClass="border-b-2 border-primary text-gray-900"
+                      :aria-label="item.name"
                   >
                     {{ item.name }}
                   </NuxtLink>
@@ -83,7 +84,7 @@
             <span class="text-[#D1D5DB]">
               Vraag een vrijblijvende offerte aan of neem contact op met ons.
             </span>
-            <NuxtLink to="/offerte-aanvragen">
+            <NuxtLink to="/offerte-aanvragen" aria-label="offer-aanvragen">
               <button class="bg-primary hover:bg-red-800 py-2 w-40 rounded-xl text-white text-sm md:text-base">
                 Offerte aanvragen
               </button>

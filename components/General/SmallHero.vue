@@ -5,7 +5,6 @@
           provider="strapi"
           :src="hero.image.data.attributes.url"
           alt="hero-image"
-          loading="lazy"
           class="h-64 md:h-96 lg:h-[15rem] w-screen xl:h-[28rem] object-cover"
           fit="contain"
           format='webp'
@@ -18,7 +17,10 @@
           {{ hero.title }}
         </h1>
         <div class="w-full pt-4">
-          <NuxtLink to="/offerte-aanvragen">
+          <NuxtLink
+              to="/offerte-aanvragen"
+              aria-label="offerte-aanvragen"
+          >
             <button class="bg-primary hover:bg-red-800 py-2 px-4 md:px-12 rounded text-white text-sm md:text-base">
               Vraag offerte aan
             </button>

@@ -19,7 +19,7 @@ import InformationDetailBlock from "~/components/General/InformationDetailBlock.
 
 defineProps({
   informationBlocksData: {
-    type: String,
+    type: Object,
     required: true
   },
 })

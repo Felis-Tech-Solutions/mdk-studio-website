@@ -7,6 +7,7 @@
           format='webp'
           quality="auto"
           :src="roofConstructionData.image.data.attributes.url"
+          alt="roof-construction"
       >
       </NuxtImg>
     <div class="grid grid-cols-2 grid-rows-2 w-full mt-4 gap-y-4 bg-white">
@@ -24,7 +25,10 @@
       </span>
     </div>
     <div class="mt-5 w-full">
-      <NuxtLink to="/offerte-aanvragen" class="flex w-full">
+      <NuxtLink
+          to="/offerte-aanvragen"
+          class="flex w-full"
+          aria-label="offer-aanvragen">
         <button class="h-10 pl-4 bg-primary hover:bg-red-900 text-white w-2/3">
           {{ roofConstructionData.buttenText }}
         </button>

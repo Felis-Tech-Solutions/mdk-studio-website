@@ -42,6 +42,7 @@
                             class="inline-flex items-center flex justify-left font-semibold py-2 hover:text-gray-700 hover:border-primary w-full text-2xl"
                             activeClass="border-b-2 border-primary text-black"
                             @click="closeNavBar"
+                            :aria-label="item.name"
                         >
                           {{ item.name }}
                         </NuxtLink>

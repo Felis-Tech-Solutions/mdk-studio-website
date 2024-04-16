@@ -16,7 +16,7 @@ import InformationBlocks from "~/components/General/InformationBlocks.vue";
 
 defineProps({
   pageData: {
-    type: String,
+    type: Object,
     required: true
   },
 })

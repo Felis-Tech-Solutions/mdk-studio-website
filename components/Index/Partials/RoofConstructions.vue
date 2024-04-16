@@ -20,7 +20,7 @@ import RoofOfConstructionBox from "~/components/Index/Partials/RoofConstructionB
 
 defineProps({
   roofConstructionData: {
-    type: String,
+    type: Object,
     required: true
   },
 })

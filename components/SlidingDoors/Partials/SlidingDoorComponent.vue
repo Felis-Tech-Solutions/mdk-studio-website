@@ -13,6 +13,7 @@
             format="webp"
             quality="auto"
             :src="imageWithTextData.image.data.attributes.url"
+            alt="sliding-door-image"
         />
       </div>
 
@@ -34,6 +35,7 @@
                   v-if="imageWithTextData.buttonText"
                   class="border rounded-lg bg-primary md:text-sm lg:text-base py-3 px-8 mt-10"
                   :class="imageWithTextData.imageType === 'ImageRight' ? 'bg-primary hover:bg-[#990c0c] text-white' : 'bg-white text-primary hover:bg-gray-200'"
+                  :aria-label="imageWithTextData.buttonText"
         >
           {{ imageWithTextData.buttonText }}
         </NuxtLink>
@@ -48,7 +50,7 @@
 
 defineProps({
   imageWithTextData: {
-    type: String,
+    type: Object,
     required: true
   },
 })

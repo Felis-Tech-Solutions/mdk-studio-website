@@ -21,7 +21,7 @@ import Schuco from "~/icons/Schuco.vue";
 
 defineProps({
   informationDetailBlock: {
-    type: String,
+    type: Object,
     required: true
   },
 })

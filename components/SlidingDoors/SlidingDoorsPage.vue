@@ -26,7 +26,7 @@ import SlidingDoorComponent from "~/components/SlidingDoors/Partials/SlidingDoor
 
 defineProps({
   pageData: {
-    type: String,
+    type: Object,
     required: true
   },
 })

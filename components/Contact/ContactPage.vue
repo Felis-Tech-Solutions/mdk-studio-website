@@ -11,6 +11,7 @@
           fit='outside'
           format='webp'
           quality='100'
+          alt="contact-image"
       />
     </div>
     <div class="pb-12 md:pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
@@ -25,7 +26,7 @@
           <form @submit.prevent="submitForm" method="POST" class="mt-16">
             <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div class="sm:col-span-2">
-                <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">Naam</label>
+                <label for="name" class="block text-sm font-semibold leading-6 text-gray-900">Naam</label>
                 <div class="mt-2.5">
                   <input
                       v-model="formData.name"
@@ -44,7 +45,7 @@
                 </div>
               </div>
               <div class="sm:col-span-2">
-                <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Postcode</label>
+                <label for="postalCode" class="block text-sm font-semibold leading-6 text-gray-900">Postcode</label>
                 <div class="mt-2.5">
                   <input v-model="formData.postalCode" id="postalCode" name="postalCode" required type="text" autocomplete="postalCode" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
                 </div>

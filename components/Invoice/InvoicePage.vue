@@ -2,11 +2,12 @@
   <div class="lg:absolute lg:inset-0 lg:left-1/2 xl:mr-36 2xl:mr-56 3xl:mr-96 xl:h-[60rem]">
     <NuxtImg
         provider="strapi"
-        class="h-64 w-[90rem] md:h-96 xl:w-[35rem] lg:h-[70rem] object-cover"
+        class="h-64 w-[90rem] md:h-96 xl:w-[55rem] lg:h-[70rem] object-cover"
         :src="contactPageApiResponse.data.attributes.image.data.attributes.url"
         fit="cover"
         format='webp'
         quality='100'
+        alt="invoice-image"
     />
   </div>
   <div class="pb-12 md:pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
@@ -22,7 +23,7 @@
           <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div class="grid grid-cols-1 md:grid-cols-2 col-span-2 gap-x-8">
               <div>
-                <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">Naam</label>
+                <label for="name" class="block text-sm font-semibold leading-6 text-gray-900">Naam</label>
                 <div class="mt-2.5">
                   <input
                       v-model="formData.name"
@@ -35,7 +36,7 @@
                 </div>
               </div>
               <div class="mt-6 md:mt-0">
-                <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">Achternaam</label>
+                <label for="surName" class="block text-sm font-semibold leading-6 text-gray-900">Achternaam</label>
                 <div class="mt-2.5">
                   <input
                       v-model="formData.surname"
@@ -72,7 +73,7 @@
               </div>
               <div class="mt-6 md:mt-0">
                 <div class="flex justify-between text-sm leading-6">
-                  <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">Woonplaats</label>
+                  <label for="residence" class="block text-sm font-semibold leading-6 text-gray-900">Woonplaats</label>
                   <p id="phone-description" class="text-gray-400">Optional</p>
                 </div>
                 <div class="mt-2.5">
@@ -105,7 +106,14 @@
               <div class="space-y-5 mt-2.5">
                 <div class="relative flex items-start">
                   <div class="flex h-6 items-center">
-                    <input id="dormer" v-model="formData.dormer" aria-describedby="dormer" name="dormer" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" />
+                    <input
+                        id="dormer"
+                        v-model="formData.dormer"
+                        aria-describedby="dormer"
+                        name="dormer"
+                        type="checkbox"
+                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                    />
                   </div>
                   <div class="ml-3 text-sm leading-6">
                     <label for="dormer" class="font-medium text-gray-900 cursor-pointer flex flex-col">
@@ -142,7 +150,6 @@
                     </label>
                   </div>
                 </div>
-
               </div>
             </div>
             <div class="sm:col-span-2">
