@@ -30,7 +30,12 @@ export default defineNuxtConfig({
       crawlLinks: true
     }
   },
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", '@nuxtjs/seo', '@nuxt/devtools'],
+  modules: [
+      "@nuxtjs/tailwindcss",
+    "@nuxt/image",
+    '@nuxtjs/seo',
+    '@nuxt/devtools',
+  ],
 
   // @ts-ignore
   runtimeConfig: {

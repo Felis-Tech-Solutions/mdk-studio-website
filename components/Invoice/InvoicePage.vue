@@ -243,6 +243,9 @@ const resetForm = () => {
 }
 
 const submitForm = async () => {
+  showSuccessMessage.value = false;
+  showErrorMessage.value = false;
+
   try {
     const response = await fetch(`${strapiBaseBaseUri.value}/quote-requests`, {
       method: 'POST',
