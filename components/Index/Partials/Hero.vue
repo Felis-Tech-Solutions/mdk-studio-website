@@ -1,10 +1,10 @@
 <template>
   <div class="relative md:h-4/6 overflow-hidden -mt-10 md:mt-0">
-    <div>
+    <div> 
       <NuxtImg
           v-if="hero.image"
           provider="strapi"
-          :src="hero.image.data.attributes.formats.large.url"
+          :src="hero.image.data.attributes.url"
           alt="hero-image"
           class="h-64 md:h-96 w-screen lg:h-[56rem] object-cover"
           fit="contain"
