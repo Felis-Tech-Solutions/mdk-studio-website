@@ -10,7 +10,7 @@
       <StepComponent v-for="roadmapStep in roadmapComponentData.roadmapSteps" :roadmap-component="roadmapStep"/>
     </div>
     <div class="flex justify-center">
-      <a href="/" class="bg-primary hover:bg-red-800 py-2 px-4 md:px-12 rounded-xl text-white text-sm md:text-base">
+      <a href="/contact" class="bg-primary hover:bg-red-800 py-2 px-4 md:px-12 rounded-xl text-white text-sm md:text-base">
         Vraag naar de mogelijkheden
       </a>
     </div>
