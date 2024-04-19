@@ -29,7 +29,7 @@
           to="/offerte-aanvragen"
           class="flex w-full"
           aria-label="offer-aanvragen">
-        <button class="h-10 pl-4 bg-white text-primary hover:bg-gray-100  w-2/3">
+        <button class="h-10 pl-4 bg-white text-primary hover:bg-gray-200  w-2/3">
           {{ roofConstructionData.buttenText }}
         </button>
         <div class="bg-black text-white w-1/3 flex justify-center items-center">

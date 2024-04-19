@@ -10,13 +10,19 @@
             Contact
           </span>
           <span class="text-[#D1D5DB]">
-            {{ FooterComponentApiResponse.data.attributes.mail }}
+            <a :href="'mailto:' + FooterComponentApiResponse.data.attributes.mail">{{FooterComponentApiResponse.data.attributes.mail}}</a>
+          </span>
+          <span class="text-[#D1D5DB]">
+            <a :href="'tel:' + FooterComponentApiResponse.data.attributes.phoneNumber">{{FooterComponentApiResponse.data.attributes.phoneNumber}}</a>
           </span>
           <span class="text-[#D1D5DB]">
             {{ FooterComponentApiResponse.data.attributes.city }}
           </span>
           <span class="text-[#D1D5DB]">
             {{ FooterComponentApiResponse.data.attributes.streetNameAndHouseNumber }}
+          </span>
+          <span class="text-[#D1D5DB]">
+            {{ FooterComponentApiResponse.data.attributes.postalCode }}
           </span>
         </div>
         <div class="flex flex-col gap-y-4 col-span-2 md:col-span-1 items-center md:items-start mt-10 md:mt-0">
@@ -44,11 +50,20 @@
           <NuxtLink
               to="/offerte-aanvragen"
               aria-label="offerte-aanvragen"
+              class="flex justify-center md:justify-start"
           >
             <button class="bg-primary hover:bg-red-800 py-2 w-40 rounded-xl text-white text-sm md:text-base">
               Offerte aanvragen
             </button>
           </NuxtLink>
+          <div class="flex flex-col gap-y-4 col-span-2 md:col-span-1 items-center md:items-start pt-6 md:mt-0 text-sm">
+            <span class="text-[#D1D5DB]">
+            KVK nummer: {{ FooterComponentApiResponse.data.attributes.cocNumber }}
+          </span>
+            <span class="text-[#D1D5DB]">
+            BTW nummer: {{ FooterComponentApiResponse.data.attributes.vatNumber }}
+          </span>
+          </div>
         </div>
         </div>
         <hr class="border my-8 border-[#4B5563] mx-6">
@@ -56,7 +71,6 @@
           <span class="text-[#9CA3AF] mx-8 md:mx-0">
             @ 2024 Felis Tech Solutions - DKDesigns, Inc. All rights reserved.
           </span>
-
         </div>
       </div>
     </footer>
