@@ -43,6 +43,7 @@
                       type="text"
                       name="surName"
                       id="surName"
+                      required
                       autocomplete="surName"
                       class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
                 </div>
@@ -51,15 +52,21 @@
             <div class="col-span-2">
               <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Email</label>
               <div class="mt-2.5">
-                <input v-model="formData.email" id="email" name="email" required type="email" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
+                <input
+                    v-model="formData.email"
+                    id="email"
+                    name="email"
+                    required
+                    type="email"
+                    autocomplete="email"
+                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                />
               </div>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-2 col-span-2 gap-x-8">
               <div>
                 <div class="flex justify-between text-sm leading-6">
                   <label for="postalCode" class="block text-sm font-semibold leading-6 text-gray-900">Postcode</label>
-                  <p id="phone-description" class="text-gray-400">Optional</p>
                 </div>
                 <div class="mt-2.5">
                   <input
@@ -67,6 +74,7 @@
                       type="text"
                       name="postalCode"
                       id="postalCode"
+                      required
                       autocomplete="postalCode"
                       class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
                 </div>
@@ -74,13 +82,13 @@
               <div class="mt-6 md:mt-0">
                 <div class="flex justify-between text-sm leading-6">
                   <label for="residence" class="block text-sm font-semibold leading-6 text-gray-900">Woonplaats</label>
-                  <p id="phone-description" class="text-gray-400">Optional</p>
                 </div>
                 <div class="mt-2.5">
                   <input
                       v-model="formData.residence"
                       type="text"
                       name="residence"
+                      required
                       id="residence"
                       autocomplete="residence"
                       class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
@@ -90,10 +98,18 @@
             <div class="col-span-2">
               <div class="flex justify-between text-sm leading-6">
                 <label for="phone" class="block font-semibold text-gray-900">Telefoon</label>
-                <p id="phone-description" class="text-gray-400">Optional</p>
               </div>
               <div class="mt-2.5">
-                <input v-model="formData.phone" type="tel" name="phone" id="phone" autocomplete="tel"  aria-describedby="phone-description" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary  sm:text-sm sm:leading-6" />
+                <input
+                    v-model="formData.phone"
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    autocomplete="tel"
+                    aria-describedby="phone-description"
+                    required
+                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary  sm:text-sm sm:leading-6"
+                />
               </div>
             </div>
             <div class="col-span-2">
@@ -101,7 +117,6 @@
                 <label for="message" class="block text-sm font-semibold leading-6 text-gray-900">
                   Waarvoor vraag je een offerte aan?
                 </label>
-                <p id="phone-description" class="text-gray-400">Optional</p>
               </div>
               <div class="space-y-5 mt-2.5">
                 <div class="relative flex items-start">
@@ -122,6 +137,21 @@
                           </span>
                       <span id="dormern" class="text-gray-500">Vraag een dakkapel offerte aan</span>
                     </label>
+                    <div  class="text-gray-500 ">
+                      <div  v-show="formData.dormer" class="flex items-center">
+                        <label for="" class="pr-2">
+                          Verwacht aantal dakkapel ramen:
+                        </label>
+                        <input
+                            id="dormerAmount"
+                            v-model="formData.dormerAmount"
+                            name="dormerAmount"
+                            type="number"
+                            required
+                            class="block w-24 rounded-md border-0 px-3.5 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary  sm:text-sm sm:leading-6"
+                        >
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="relative flex items-start">
@@ -135,14 +165,37 @@
                           </span>
                       <span id="cwindowFrame" class="text-gray-500">Vraag een raamkozijnen offerte aan</span>
                     </label>
+                    <div  class="text-gray-500 ">
+                      <div  v-show="formData.windowFrame" class="flex items-center ">
+                        <label for="" class="pr-2">
+                          Verwacht aantal kozijnen:
+                        </label>
+                        <input
+                            id="dormerAmount"
+                            v-model="formData.windowFrameAmount"
+                            name="dormerAmount"
+                            type="number"
+                            required
+                            class="block w-24 rounded-md border-0 px-3.5 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary  sm:text-sm sm:leading-6"
+                        >
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="relative flex items-start">
                   <div class="flex h-6 items-center">
-                    <input id="both" v-model="formData.both" aria-describedby="both" name="both" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" />
+                    <input
+                        id="both"
+                        v-model="formData.both"
+                        aria-describedby="both"
+                        name="both"
+                        type="checkbox"
+                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        @click="setBothInvoiceValues"
+                    />
                   </div>
                   <div class="ml-3 text-sm leading-6">
-                    <label for="both" class="font-medium text-gray-900 cursor-pointer flex flex-col">
+                    <label for="both" class="font-medium text-gray-900 cursor-pointer flex flex-col" @click="setBothInvoiceValues">
                           <span>
                             Beide
                           </span>
@@ -214,11 +267,11 @@ const formData = ref({
   postalCode: "",
   residence: "",
   dormer: false,
+  dormerAmount: null,
   windowFrame: false,
+  windowFrameAmount: null,
   both: false,
 });
-
-
 
 const isSubmitting = ref(false);
 const showSuccessMessage = ref(false);
@@ -234,13 +287,14 @@ const resetForm = () => {
   formData.value.message = "";
   formData.value.residence = "";
   formData.value.dormer = false;
+  formData.value.dormerAmount = null;
   formData.value.windowFrame = false;
+  formData.value.windowFrameAmount = null;
   formData.value.both = false;
-
   showSuccessMessage.value = false;
   showErrorMessage.value = false;
   errorMessage.value = null;
-}
+};
 
 const submitForm = async () => {
   showSuccessMessage.value = false;
@@ -262,7 +316,9 @@ const submitForm = async () => {
           message: formData.value.message,
           residence: formData.value.residence,
           dormer: formData.value.dormer,
+          dormerAmount: formData.value.dormerAmount,
           windowFrame: formData.value.windowFrame,
+          windowFrameAmount: formData.value.windowFrameAmount,
           both: formData.value.both,
         }
       })
@@ -281,5 +337,10 @@ const submitForm = async () => {
   } finally {
     isSubmitting.value = false;
   }
+}
+
+const setBothInvoiceValues = () => {
+  formData.value.dormer = !formData.value.both;
+  formData.value.windowFrame = !formData.value.both;
 }
 </script>
