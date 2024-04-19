@@ -1,5 +1,5 @@
 <template>
-  <div class="col-span-1 h-[25rem]  4xl:h-[28rem] flex flex-col ">
+  <div class="col-span-1 h-[25rem]  4xl:h-[28rem] flex flex-col bg-primary">
       <NuxtImg
           provider="strapi"
           class="w-full h-2/3 img rounded"
@@ -10,7 +10,7 @@
           alt="roof-construction"
       >
       </NuxtImg>
-    <div class="grid grid-cols-2 grid-rows-2 w-full mt-4 gap-y-4 bg-white">
+    <div class="grid grid-cols-2 grid-rows-2 w-full mt-4 gap-y-4 bg-primary text-white">
       <span>
         {{roofConstructionData.textFieldOne}}
       </span>
@@ -29,7 +29,7 @@
           to="/offerte-aanvragen"
           class="flex w-full"
           aria-label="offer-aanvragen">
-        <button class="h-10 pl-4 bg-primary hover:bg-red-900 text-white w-2/3">
+        <button class="h-10 pl-4 bg-white text-primary hover:bg-gray-100  w-2/3">
           {{ roofConstructionData.buttenText }}
         </button>
         <div class="bg-black text-white w-1/3 flex justify-center items-center">
