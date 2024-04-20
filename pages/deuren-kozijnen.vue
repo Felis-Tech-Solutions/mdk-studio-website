@@ -14,6 +14,6 @@ import ImageWithText from "~/components/General/ImageWithText.vue";
 const strapiBaseBaseUri = inject('strapiBaseBaseUri');
 
 const { data: pageData, pending: isLoading, error } = useFetch(
-    `${strapiBaseBaseUri}/deuren-kozijnen-page?populate[image]=*&populate[informationBlocks][populate]=*&populate[TextBlocks][populate]=*`
+    `${strapiBaseBaseUri}/deuren-kozijnen-page?populate[image]=*&populate[informationBlocks][populate]=*&populate[TextBlocks][populate]=*&populate[profileSort][populate][profileSorts][populate][image]=*`
 )
 </script>

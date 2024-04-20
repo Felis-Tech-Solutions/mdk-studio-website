@@ -12,6 +12,7 @@ import WindowFramePage from "~/components/WindowFrames/WindowFramePage.vue";
 const strapiBaseBaseUri = inject('strapiBaseBaseUri');
 
 const { data: pageData, pending: isLoading, error } = useFetch(
-    `${strapiBaseBaseUri}/kozijnen-page?populate[image]=*&populate[informationBlocks][populate]=*&populate[roofConstructionComponent][populate][roofConstructionComponent][populate][image]=*&populate[TextBlocks][populate]=*`
+    `${strapiBaseBaseUri}/kozijnen-page?populate[image]=*&populate[informationBlocks][populate]=*&populate[roofConstructionComponent][populate][roofConstructionComponent][populate][image]=*&populate[TextBlocks][populate]=*&populate[slidingDoorsInfo][populate]=*`
 )
 </script>
+
