@@ -8,7 +8,7 @@
 <!--      <RoofConstructions :roof-construction-data="pageData.data.attributes.roofConstructionComponent" v-if="pageData.data.attributes.roofConstructionComponent" class="2xl:mx-24"/>-->
 <!--    </div>-->
 <!--    <SlidingDoorComponent v-if="pageData.data.attributes.slidingDoorsInfo" :imageWithTextData="slidingDoorsInfo" v-for="slidingDoorsInfo in pageData.data.attributes.slidingDoorsInfo"/>-->
-    <ProfileSorts :profileSorts="pageData.data.attributes.profileSort" class="mt-12 md:mt-0"/>
+    <ProfileSorts :profileSorts="pageData.data.attributes.profileSort" class="mt-12 md:mt-0" v-if="pageData.data.attributes.profileSort"/>
     <ImageWithText :image-with-text-data="pageData.data.attributes.TextBlocks" v-if="pageData.data.attributes.TextBlocks"/>
   </div>
 </template>

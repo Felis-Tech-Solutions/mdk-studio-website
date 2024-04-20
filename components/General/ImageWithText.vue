@@ -17,12 +17,12 @@
     </div>
     <div class="lg:w-1/2 flex items-center md:items-start flex-col mt-4 md:mt-0 px-6 md:px-0">
       <div class="w-full md:w-auto lg:flex lg:flex-col lg:items-center">
-        <span class="text-[32px] md:pr-24 font-bold text">
+        <span class="text-[32px] md:pr-24 font-bold text" v-if="imageWithTextData.title ">
           {{ imageWithTextData.title }}
         </span>
         <hr class="border-b-8 w-full rounded-2xl" :class="imageWithTextData.imageType === 'ImageRight' ? 'border-primary' : 'border-white'">
       </div>
-      <div class="mt-6 leading-6 md:leading-7 text-sm md:text-base">
+      <div class="mt-6 leading-6 md:leading-7 text-sm md:text-base" v-if=" imageWithTextData.description">
         {{ imageWithTextData.description }}
       </div>
       <NuxtLink
