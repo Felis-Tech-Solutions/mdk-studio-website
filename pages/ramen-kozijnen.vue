@@ -3,12 +3,12 @@
     loading
   </div>
   <div v-else>
-    <WindowFramePage :pageData="pageData" v-if="pageData.data"/>
+    <FramePage :pageData="pageData" v-if="pageData.data"/>
   </div>
 </template>
 <script setup>
 
-import WindowFramePage from "~/components/WindowFrames/WindowFramePage.vue";
+import FramePage from "~/components/Frame/FramePage.vue";
 
 const strapiBaseBaseUri = inject('strapiBaseBaseUri');
 
