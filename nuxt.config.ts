@@ -50,8 +50,8 @@ export default defineNuxtConfig({
   image: {
     provider: 'strapi',
     strapi: {
-      baseURL: 'http://localhost:1337'
-      // baseURL: 'https://strapi.mdk-studio.nl'
+      // baseURL: 'http://localhost:1337'
+      baseURL: 'https://strapi.mdk-studio.nl'
     },
     inject: true,
     quality: 100,
@@ -65,6 +65,7 @@ export default defineNuxtConfig({
       'xxl': 1536,
       '2xl': 1536
     },
-    baseURL: 'https://strapi.mdk-studio.nl'
+    domains: ['https://mdk-studio.nl/']
+    // domains: ['http://localhost:1337/']
   },
 });
