@@ -81,18 +81,35 @@
               </div>
               <div class="mt-6 md:mt-0">
                 <div class="flex justify-between text-sm leading-6">
-                  <label for="residence" class="block text-sm font-semibold leading-6 text-gray-900">Woonplaats</label>
+                  <label for="houseNumber" class="block text-sm font-semibold leading-6 text-gray-900">Huisnummer</label>
                 </div>
                 <div class="mt-2.5">
                   <input
-                      v-model="formData.residence"
+                      v-model="formData.houseNumber"
                       type="text"
-                      name="residence"
+                      name="houseNumber"
                       required
-                      id="residence"
-                      autocomplete="residence"
+                      id="houseNumber"
+                      autocomplete="houseNumber"
                       class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
                 </div>
+              </div>
+            </div>
+            <div class="col-span-2">
+              <div class="flex justify-between text-sm leading-6">
+                <label for="residence" class="block font-semibold text-gray-900">Woonplaats</label>
+              </div>
+              <div class="mt-2.5">
+                <input
+                    v-model="formData.residence"
+                    type="text"
+                    name="residence"
+                    id="residence"
+                    autocomplete="residence"
+                    aria-describedby="residence"
+                    required
+                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary  sm:text-sm sm:leading-6"
+                />
               </div>
             </div>
             <div class="col-span-2">
@@ -140,7 +157,7 @@
                     <div  class="text-gray-500 ">
                       <div  v-show="formData.dormer" class="flex items-center">
                         <label for="" class="pr-2">
-                          Verwacht aantal dakkapel ramen:
+                          Verwacht aantal dakkapellen:
                         </label>
                         <input
                             id="dormerAmount"
@@ -265,6 +282,7 @@ const formData = ref({
   phone: "",
   message: "",
   postalCode: "",
+  houseNumber: "",
   residence: "",
   dormer: false,
   dormerAmount: null,
@@ -283,6 +301,7 @@ const resetForm = () => {
   formData.value.surname = "";
   formData.value.email = "";
   formData.value.postalCode = "";
+  formData.value.houseNumber = "";
   formData.value.phone = "";
   formData.value.message = "";
   formData.value.residence = "";
@@ -312,6 +331,7 @@ const submitForm = async () => {
           surname: formData.value.surname,
           email: formData.value.email,
           postalCode: formData.value.postalCode,
+          houseNumber: formData.value.houseNumber,
           phone: formData.value.phone,
           message: formData.value.message,
           residence: formData.value.residence,
