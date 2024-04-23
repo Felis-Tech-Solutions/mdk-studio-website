@@ -5,7 +5,6 @@
         provider="strapi"
         class="w-full h-2/3 img rounded"
         loading="lazy"
-        format='webp'
         quality="auto"
         :src="profileSort.image.data.attributes.url"
         alt="roof-construction"

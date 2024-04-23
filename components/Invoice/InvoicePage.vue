@@ -5,7 +5,6 @@
         class="h-64 w-[90rem] md:h-96 xl:w-[55rem] lg:h-[70rem] object-cover"
         :src="contactPageApiResponse.data.attributes.image.data.attributes.url"
         fit="cover"
-        format='webp'
         quality='100'
         alt="invoice-image"
     />

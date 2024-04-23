@@ -17,7 +17,6 @@
           loading="lazy"
           class="h-64 w-[90rem] md:h-96 lg:h-[15rem] xl:w-[35rem] xl:h-[15rem] object-cover"
           fit="cover"
-          format='webp'
           quality="auto"
       />
     </div>

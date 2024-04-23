@@ -7,7 +7,6 @@
           alt="hero-image"
           class="h-64 md:h-96 lg:h-[15rem] w-screen xl:h-[28rem] object-cover"
           fit="contain"
-          format='webp'
           quality="auto"
       />
     </div>

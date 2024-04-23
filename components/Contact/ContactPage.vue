@@ -9,7 +9,6 @@
           width='1920px'
           height='1080px'
           fit='outside'
-          format='webp'
           quality='100'
           alt="contact-image"
       />
