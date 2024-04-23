@@ -6,8 +6,22 @@
   </div>
   <div v-else>
     <div class="lg:h-screen">
-      <Header class="lg:h-1/6 h-32" v-if="HeroComponentApiResponse.data && ContactInformationApiResponse.data" :hero="HeroComponentApiResponse.data.attributes" :contactInformation="ContactInformationApiResponse.data"/>
-      <Hero v-if="HeroComponentApiResponse.data" :hero="HeroComponentApiResponse.data.attributes"/>
+      <Header
+          class="lg:h-1/6 h-32"
+              v-if="
+              HeroComponentApiResponse
+              && ContactInformationApiResponse
+              && HeroComponentApiResponse.data
+              && ContactInformationApiResponse.data"
+          :hero="HeroComponentApiResponse.data.attributes"
+          :contactInformation="ContactInformationApiResponse.data"
+      />
+      <Hero
+          v-if="
+          HeroComponentApiResponse
+          &&HeroComponentApiResponse.data"
+          :hero="HeroComponentApiResponse.data.attributes"
+      />
     </div>
     <slot/>
     <Footer />

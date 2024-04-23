@@ -9,19 +9,24 @@
           <span class="text-[#9CA3AF] uppercase">
             Contact
           </span>
-          <span class="text-[#D1D5DB]">
-            <a :href="'mailto:' + FooterComponentApiResponse.data.attributes.mail">{{FooterComponentApiResponse.data.attributes.mail}}</a>
+          <span class="text-[#D1D5DB]" v-if="FooterComponentApiResponse.data.attributes.mail">
+            <a :href="'mailto:' + FooterComponentApiResponse.data.attributes.mail"
+            >
+              {{FooterComponentApiResponse.data.attributes.mail}}
+            </a>
           </span>
-          <span class="text-[#D1D5DB]">
-            <a :href="'tel:' + FooterComponentApiResponse.data.attributes.phoneNumber">{{FooterComponentApiResponse.data.attributes.phoneNumber}}</a>
+          <span class="text-[#D1D5DB]" v-if="FooterComponentApiResponse.data.attributes.phoneNumber">
+            <a :href="'tel:' + FooterComponentApiResponse.data.attributes.phoneNumber">
+              {{FooterComponentApiResponse.data.attributes.phoneNumber}}
+            </a>
           </span>
-          <span class="text-[#D1D5DB]">
+          <span class="text-[#D1D5DB]" v-if=" FooterComponentApiResponse.data.attributes.city">
             {{ FooterComponentApiResponse.data.attributes.city }}
           </span>
-          <span class="text-[#D1D5DB]">
+          <span class="text-[#D1D5DB]" v-if="FooterComponentApiResponse.data.attributes.streetNameAndHouseNumber">
             {{ FooterComponentApiResponse.data.attributes.streetNameAndHouseNumber }}
           </span>
-          <span class="text-[#D1D5DB]">
+          <span class="text-[#D1D5DB]" v-if="FooterComponentApiResponse.data.attributes.postalCode">
             {{ FooterComponentApiResponse.data.attributes.postalCode }}
           </span>
         </div>
@@ -57,10 +62,15 @@
             </button>
           </NuxtLink>
           <div class="flex flex-col gap-y-4 col-span-2 md:col-span-1 items-center md:items-start pt-6 md:mt-0 text-sm">
-            <span class="text-[#D1D5DB]">
+            <span class="text-[#D1D5DB]"
+                  v-if="FooterComponentApiResponse && FooterComponentApiResponse.data && FooterComponentApiResponse.data.attributes"
+            >
             KVK nummer: {{ FooterComponentApiResponse.data.attributes.cocNumber }}
           </span>
-            <span class="text-[#D1D5DB]">
+            <span
+                class="text-[#D1D5DB]"
+                v-if="FooterComponentApiResponse && FooterComponentApiResponse.data && FooterComponentApiResponse.data.attributes"
+            >
             BTW nummer: {{ FooterComponentApiResponse.data.attributes.vatNumber }}
           </span>
           </div>
