@@ -28,11 +28,16 @@
           to="/offerte-aanvragen"
           class="flex w-full"
           aria-label="offer-aanvragen">
-        <button class="h-10 pl-4 bg-white text-primary hover:bg-gray-200  w-2/3">
+        <button class="h-10 pl-4 bg-white text-primary hover:bg-gray-200  w-1/2">
           {{ roofConstructionData.buttenText }}
         </button>
-        <div class="bg-black text-white w-1/3 flex justify-center items-center">
-          {{ roofConstructionData.price }}
+        <div class="bg-black text-white w-1/2 flex justify-center items-center">
+          <span class="pr-2">
+            Vanaf
+          </span>
+          <span>
+            {{ roofConstructionData.price }}
+          </span>
         </div>
       </NuxtLink>
     </div>

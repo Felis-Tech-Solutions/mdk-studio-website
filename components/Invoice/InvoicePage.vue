@@ -1,15 +1,7 @@
 <template>
   <div class="lg:absolute lg:inset-0 lg:left-1/2 xl:mr-36 2xl:mr-56 3xl:mr-96 xl:h-[60rem]">
-    <NuxtImg
-        provider="strapi"
-        class="h-64 w-[90rem] md:h-96 xl:w-[55rem] lg:h-[70rem] object-cover"
-        :src="contactPageApiResponse.data.attributes.image.data.attributes.url"
-        fit="cover"
-        quality='100'
-        alt="invoice-image"
-    />
   </div>
-  <div class="pb-12 md:pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
+  <div class="pb-12 md:pb-24 md:pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32 flex flex-col-reverse md:flex-col">
     <div class="px-6 lg:px-8">
       <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900">
@@ -272,6 +264,14 @@
         </form>
       </div>
     </div>
+    <NuxtImg
+        provider="strapi"
+        class="h-64 w-[90rem] md:h-96 xl:w-[55rem] lg:h-[40rem] object-cover pb-10 md:pb-0"
+        :src="contactPageApiResponse.data.attributes.image.data.attributes.url"
+        fit="cover"
+        quality='100'
+        alt="invoice-image"
+    />
   </div>
 </template>
 <script setup lang="ts">

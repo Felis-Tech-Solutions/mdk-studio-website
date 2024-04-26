@@ -9,7 +9,7 @@
           class="w-full 2xl:w-[45rem] h-[20rem] 2xl:h-[30rem] object-cover rounded-2xl"
           fit='cover'
           loading="lazy"
-          quality="auto"
+          quality=100
           :src="imageWithTextData.image.data.attributes.url"
           alt="image-with-text "
       />
