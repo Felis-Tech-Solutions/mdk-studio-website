@@ -6,13 +6,13 @@
         v-if="pageData.roofConstructionComponent" class="2xl:mx-24"
         :page-links="roofConstructionsPageLinks"
     />
+      <RoofConstructions
+          :roof-construction-data="pageData.roofConstructionComponent[1]"
+          v-if="pageData.roofConstructionComponent"
+          class="2xl:mx-24"
+          :page-links="windowPageLinks"
+      />
       <Roadmap :roadmap-component-data="pageData.Roadmap" v-if="pageData.Roadmap"/>
-    <RoofConstructions
-        :roof-construction-data="pageData.roofConstructionComponent[1]"
-        v-if="pageData.roofConstructionComponent"
-        class="2xl:mx-24"
-        :page-links="windowPageLinks"
-    />
     </div>
     <ImageWithText :image-with-text-data="pageData.aboutUs" v-if="pageData.aboutUs"/>
     <div class="px-6 lg:px-24 2xl:px-80 flex flex-col lg:gap-y-32">

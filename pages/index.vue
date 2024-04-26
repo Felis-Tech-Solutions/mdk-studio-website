@@ -16,10 +16,6 @@ const { data: HomePageApiResponse, pending: isLoading, error } = useFetch<HomePa
     `${strapiBaseBaseUri}/home-page?populate[Roadmap][populate]=*&populate[roofConstructionComponent][populate][roofConstructionComponent][populate][image]=*&populate[aboutUs][populate]=*&populate[informationBlocks][populate]=*`
 )
 
-definePageMeta({
-  layout: 'home'
-})
-
 defineOgImageComponent('NuxtSeo', {
   title: 'MDK Studio',
   description: 'MDK studio, dakkappellen en kozijnen. mdk-studio.nl is uw vertrouwde partner voor betaalbare, kwaliteitsdakkapellen en raamkozijnen.',
@@ -44,6 +40,7 @@ useHead({
 
 definePageMeta({
   title: 'MDK Studio Home page ',
+  layout: 'home',
   meta: [
     { charset: 'utf-8' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
