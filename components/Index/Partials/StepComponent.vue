@@ -1,5 +1,5 @@
 <template>
-  <div class="h-96 w-full md:px-32 lg:px-0 lg:w-[347px]">
+  <div class="h-96 w-full md:px-32 lg:px-2  xl:w-[347px]">
     <div class="flex items-center justify-center">
       <component :is="getIconComponent(roadmapComponent.icon)" class="h-40"/>
     </div>
