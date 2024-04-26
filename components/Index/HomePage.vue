@@ -33,9 +33,9 @@ const  roofConstructionsPageLinks = [
 ]
 
 const  windowPageLinks = [
-  '/deuren-kozijnen',
-  '/ramen-kozijnen',
-  '/schuifpuien-kozijnen'
+  '/kozijnen',
+  '/kozijnen',
+  '/kozijnen'
 ]
 
 defineProps({

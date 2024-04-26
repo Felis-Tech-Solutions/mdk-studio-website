@@ -13,7 +13,7 @@
       />
     </div>
     <SlidingDoorComponent v-if="pageData.data.attributes.slidingDoorsInfo" :imageWithTextData="slidingDoorsInfo" v-for="slidingDoorsInfo in pageData.data.attributes.slidingDoorsInfo"/>
-    <ImageWithText :image-with-text-data="pageData.data.attributes.TextBlocks" v-if="pageData.data.attributes.TextBlocks"/>
+<!--    <ImageWithText :image-with-text-data="pageData.data.attributes.TextBlocks" v-if="pageData.data.attributes.TextBlocks"/>-->
   </div>
 </template>
 <script setup lang="ts">
@@ -31,9 +31,5 @@ defineProps({
   }
 })
 
-const  pageLinks = [
-  '/deuren-kozijnen',
-  '/ramen-kozijnen',
-  '/schuifpuien-kozijnen'
-]
+const  pageLinks = [];
 </script>
