@@ -31,7 +31,8 @@
                       required
                       id="name"
                       autocomplete="name"
-                      class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
+                      class="block w-full rounded-md px-3.5 py-2 text-gray-900 shadow-sm border border-gray-300 placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6"
+                  />
                 </div>
               </div>
               <div class="mt-6 md:mt-0">
@@ -44,7 +45,8 @@
                       id="surName"
                       required
                       autocomplete="surName"
-                      class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
+                      class="block w-full rounded-md px-3.5 py-2 text-gray-900 shadow-sm border border-gray-300 placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6"
+                  />
                 </div>
               </div>
             </div>
@@ -58,7 +60,7 @@
                     required
                     type="email"
                     autocomplete="email"
-                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                    class="block w-full rounded-md px-3.5 py-2 text-gray-900 shadow-sm border border-gray-300 placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -75,7 +77,8 @@
                       id="postalCode"
                       required
                       autocomplete="postalCode"
-                      class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
+                      class="block w-full rounded-md px-3.5 py-2 text-gray-900 shadow-sm border border-gray-300 placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6"
+                    />
                 </div>
               </div>
               <div class="mt-6 md:mt-0">
@@ -90,7 +93,8 @@
                       required
                       id="houseNumber"
                       autocomplete="houseNumber"
-                      class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
+                      class="block w-full rounded-md px-3.5 py-2 text-gray-900 shadow-sm border border-gray-300 placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6"
+                      />
                 </div>
               </div>
             </div>
@@ -107,7 +111,7 @@
                     autocomplete="residence"
                     aria-describedby="residence"
                     required
-                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary  sm:text-sm sm:leading-6"
+                    class="block w-full rounded-md px-3.5 py-2 text-gray-900 shadow-sm border border-gray-300 placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -124,7 +128,7 @@
                     autocomplete="tel"
                     aria-describedby="phone-description"
                     required
-                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary  sm:text-sm sm:leading-6"
+                    class="block w-full rounded-md px-3.5 py-2 text-gray-900 shadow-sm border border-gray-300 placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -143,7 +147,7 @@
                         aria-describedby="dormer"
                         name="dormer"
                         type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600 accent-primary"
                     />
                   </div>
                   <div class="ml-3 text-sm leading-6">
@@ -164,7 +168,7 @@
                             name="dormerAmount"
                             type="number"
                             required
-                            class="block w-24 rounded-md border-0 px-3.5 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary  sm:text-sm sm:leading-6"
+                            class=" focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary block w-24 border-gray-300 rounded-md px-3.5 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-inset  sm:text-sm sm:leading-6"
                         >
                       </div>
                     </div>
@@ -172,7 +176,14 @@
                 </div>
                 <div class="relative flex items-start">
                   <div class="flex h-6 items-center">
-                    <input id="windowFrame" v-model="formData.windowFrame" aria-describedby="windowFrame" name="windowFrame" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" />
+                    <input
+                        id="windowFrame"
+                        v-model="formData.windowFrame"
+                        aria-describedby="windowFrame"
+                        name="windowFrame"
+                        type="checkbox"
+                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600 accent-primary"
+                    />
                   </div>
                   <div class="ml-3 text-sm leading-6">
                     <label for="windowFrame" class="font-medium text-gray-900 cursor-pointer flex flex-col">
@@ -192,7 +203,7 @@
                             name="dormerAmount"
                             type="number"
                             required
-                            class="block w-24 rounded-md border-0 px-3.5 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary  sm:text-sm sm:leading-6"
+                            class=" focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary block w-24 border-gray-300 rounded-md px-3.5 py-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-inset  sm:text-sm sm:leading-6"
                         >
                       </div>
                     </div>
@@ -206,7 +217,7 @@
                         aria-describedby="both"
                         name="both"
                         type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600 accent-primary"
                         @click="setBothInvoiceValues"
                     />
                   </div>
@@ -229,7 +240,14 @@
                 <p id="message-description" class="text-gray-400">Max 500 characters</p>
               </div>
               <div class="mt-2.5">
-                <textarea v-model="formData.message" id="message" name="message" rows="4" aria-describedby="message-description" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
+                <textarea
+                    v-model="formData.message"
+                    id="message"
+                    name="message"
+                    rows="4"
+                    aria-describedby="message-description"
+                    class="block w-full rounded-md px-3.5 py-2 text-gray-900 shadow-sm border border-gray-300 placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6"
+                />
               </div>
             </div>
           </div>

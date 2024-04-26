@@ -34,19 +34,34 @@
                       required
                       id="name"
                       autocomplete="name"
-                      class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
+                      class="block w-full rounded-md px-3.5 py-2 text-gray-900 shadow-sm border border-gray-300 placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6"
+                  />
                 </div>
               </div>
               <div class="sm:col-span-2">
                 <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Email</label>
                 <div class="mt-2.5">
-                  <input v-model="formData.email" id="email" name="email" required type="email" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
+                  <input
+                      v-model="formData.email"
+                      id="email"
+                      name="email"
+                      required type="email"
+                      autocomplete="email"
+                      class="block w-full rounded-md px-3.5 py-2 text-gray-900 shadow-sm border border-gray-300 placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6"
+                  />
                 </div>
               </div>
               <div class="sm:col-span-2">
                 <label for="postalCode" class="block text-sm font-semibold leading-6 text-gray-900">Postcode</label>
                 <div class="mt-2.5">
-                  <input v-model="formData.postalCode" id="postalCode" name="postalCode" required type="text" autocomplete="postalCode" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
+                  <input
+                      v-model="formData.postalCode"
+                      id="postalCode"
+                      name="postalCode"
+                      required type="text"
+                      autocomplete="postalCode"
+                      class="block w-full rounded-md px-3.5 py-2 text-gray-900 shadow-sm border border-gray-300 placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6"
+                  />
                 </div>
               </div>
               <div class="sm:col-span-2">
@@ -55,7 +70,14 @@
                   <p id="phone-description" class="text-gray-400">Optional</p>
                 </div>
                 <div class="mt-2.5">
-                  <input v-model="formData.phone" type="tel" name="phone" id="phone" autocomplete="tel"  aria-describedby="phone-description" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary  sm:text-sm sm:leading-6" />
+                  <input
+                      v-model="formData.phone"
+                      type="tel"
+                      name="phone"
+                      id="phone" autocomplete="tel"
+                      aria-describedby="phone-description"
+                      class="block w-full rounded-md px-3.5 py-2 text-gray-900 shadow-sm border border-gray-300 placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6"
+                  />
                 </div>
               </div>
               <div class="sm:col-span-2">
@@ -66,7 +88,14 @@
                   <p id="message-description" class="text-gray-400">Max 500 characters</p>
                 </div>
                 <div class="mt-2.5">
-                  <textarea v-model="formData.message" id="message" name="message" required rows="4" aria-describedby="message-description" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
+                  <textarea
+                      v-model="formData.message"
+                      id="message"
+                      name="message"
+                      required rows="4"
+                      aria-describedby="message-description"
+                      class="block w-full rounded-md px-3.5 py-2 text-gray-900 shadow-sm border border-gray-300 placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6"
+                  />
                 </div>
               </div>
             </div>
@@ -173,3 +202,7 @@ const submitForm = async () => {
   }
 }
 </script>
+
+<style scoped>
+
+</style>
