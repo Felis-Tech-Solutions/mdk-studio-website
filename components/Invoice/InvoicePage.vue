@@ -159,7 +159,7 @@
                     </label>
                     <div  class="text-gray-500 ">
                       <div  v-show="formData.dormer" class="flex items-center">
-                        <label for="" class="pr-2">
+                        <label for="dormerAmount" class="pr-2">
                           Verwacht aantal dakkapellen:
                         </label>
                         <input
@@ -194,7 +194,7 @@
                     </label>
                     <div  class="text-gray-500 ">
                       <div  v-show="formData.windowFrame" class="flex items-center ">
-                        <label for="" class="pr-2">
+                        <label for="dormerAmount" class="pr-2">
                           Verwacht aantal kozijnen:
                         </label>
                         <input
